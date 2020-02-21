@@ -7,10 +7,10 @@ Obs: fiz uma API, mas posteriormente ao tentar usar o resource nas routes, acabe
 1- criar o banco de dados usuários no mysql
 “CREATE DATABASE IF NOT EXISTS Usuarios“
 
-2 - executar o migrate
+2 - executar o migrate:
 Digitar na pasta do projeto (testeapi) o comando através do prompt “php artisan migrate”
 
-Acesso API utilizando o insomnia 
+Acesso a API utilizando o insomnia 
 
 3 - importar json usuários:
 Abrir o insomnia e executar o json com o método POST
