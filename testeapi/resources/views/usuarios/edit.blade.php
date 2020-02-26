@@ -1,105 +1,153 @@
-<div class="container">
-    <div class="col-md-12">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-        <form action="{{ route('usuarios.update', ['usuario' => $usuarios['id']])}}" class="form-horizontal" method="POST">
-            @csrf
-            @method('PUT')
-            <div class="row">
-                <div class="form-group">
-                    <label> ID </label>
-                    <input type="text" class="form-control" name="id" value="{{old('usuario', $usuarios['id'])}}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> nome </label>
-                    <input type="text" class="form-control" name="name" value="{{old('usuario', $usuarios['name'])}}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> username </label>
-                    <input type="text" class="form-control" name="username" value="{{old('usuario', $usuarios['username'])}}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> email </label>
-                    <input type="text" class="form-control" name="email" value="{{old('usuario', $usuarios['email'])}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index usuarios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Teste Mobly API</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('usuarios.index') }}">Usuarios <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ route('usuarios.create') }}">Criar Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Listar Posts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <form action="{{ route('usuarios.update', ['usuario' => $usuarios['id']])}}" class="form-horizontal" method="POST">
+        @csrf
+        @method('PUT')
+        <div class="container">
+
+        <h3>Editar do Usuario</h3> 
+
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['id'])}}" name="id">
                 </div>
             </div>
 
-            <div class="row">
-                <div class="form-group">
-                    <label> street </label>
-                    <input type="text" class="form-control" name="street" value="{{old('usuario', $usuarios['street'])}}">
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['name'])}}" name="name">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> suite </label>
-                    <input type="text" class="form-control" name="suite" value="{{old('usuario', $usuarios['suite'])}}">
+
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['username'])}}" name="username">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> city </label>
-                    <input type="text" class="form-control" name="city" value="{{old('usuario', $usuarios['city'])}}">
+
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['email'])}}" name="email">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> zipcode </label>
-                    <input type="text" class="form-control" name="zipcode" value="{{old('usuario', $usuarios['zipcode'])}}">
+
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Street</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['street'])}}" name="street">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> geolat </label>
-                    <input type="text" class="form-control" name="geolat" value="{{old('usuario', $usuarios['geolat'])}}">
+
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Suite</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['suite'])}}" name="suite">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> geolng </label>
-                    <input type="text" class="form-control" name="geolng" value="{{old('usuario', $usuarios['geolng'])}}">
+
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">City</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['city'])}}" name="city">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> phone </label>
-                    <input type="text" class="form-control" name="phone" value="{{old('usuario', $usuarios['phone'])}}">
+
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Zipcode</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['zipcode'])}}" name="zipcode">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> website </label>
-                    <input type="text" class="form-control" name="website" value="{{old('usuario', $usuarios['website'])}}">
+
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Longitude</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['geolng'])}}" name="geolng">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> compname </label>
-                    <input type="text" class="form-control" name="compname" value="{{old('usuario', $usuarios['compname'])}}">
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Latitude</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['geolat'])}}" name="geolat">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> catchphrase </label>
-                    <input type="text" class="form-control" name="catchphrase" value="{{old('usuario', $usuarios['catchphrase'])}}">
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">phone</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['phone'])}}" name="phone">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <label> bs </label>
-                    <input type="text" class="form-control" name="bs" value="{{old('usuario', $usuarios['bs'])}}">
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">website</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['website'])}}" name="website">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <button type="submit" class="btn btn-defalt"> salvar </button>
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">compname</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['compname'])}}" name="compname">
                 </div>
             </div>
-        </form>
-    </div>
-</div>
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">catchphrase</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['catchphrase'])}}" name="catchphrase">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">bs</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['bs'])}}" name="bs">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary mb-2">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
