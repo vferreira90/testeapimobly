@@ -4,7 +4,7 @@ Como executar o teste:
 
 Obs: fiz uma API, mas posteriormente ao tentar usar o resource nas routes, acabei criando outra.
 
-1- criar o banco de dados usuários no mysql
+1- criar o banco de dados usuários no mysql:
 “CREATE DATABASE IF NOT EXISTS Usuarios“
 
 2 - executar o migrate:
@@ -22,17 +22,17 @@ Abrir o insomnia e executar o json com o método POST
 Posts: http://jsonplaceholder.typicode.com/posts
 http://localhost/testeapi/public/api/usuarios/posts/add
 
-5- listar todos os usuários
+5- listar todos os usuários:
 No insomnia, utilizando método GET,  digitar a url:
 http://localhost/testeapi/public/api/users
 
-7- Editar usuários
+7- Editar usuários:
 No insomnia, utilizando método PUT, digitar a url: http://localhost/testeapi/public/api/users/update/ (id do usuário)
 E colar os dados em formato json
 
-8- Excluir usuários
+8- Excluir usuários:
 No insomnia, utilizando método DELETE, digitar a url:
-http://localhost/testeapi/public/api/users/del/ (id do usuário)
+http://localhost/testeapi/public/api/users/delete/ (id do usuário)
 
 9- Localizar usuario especifico
 No insomnia, utilizando método GET, digitar a url:
