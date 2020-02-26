@@ -176,6 +176,22 @@ class UsuarioController extends Controller
          $user->delete();
 
          return ['retorno' => 'ok'];
+
+         return redirect()->route('usuarios.index');
+      } catch (\Exception $erro) {
+         return ['retorno' => 'erro', 'details' => $erro];
+      }
+   }
+
+   public function deleteuser($id)
+   {
+      try {
+
+         $user = Usuario::find($id);
+         $user->delete();
+
+         return redirect()->route('usuarios.index');
+
       } catch (\Exception $erro) {
          return ['retorno' => 'erro', 'details' => $erro];
       }

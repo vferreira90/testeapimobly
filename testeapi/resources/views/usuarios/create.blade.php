@@ -24,9 +24,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route('usuarios.create') }}">Criar Usuarios</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Listar Posts</a>
-                </li>
             </ul>
         </div>
     </nav>

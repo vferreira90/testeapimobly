@@ -33,7 +33,9 @@ Route::namespace('Api')->group(function () {
 
     Route::put('/users/update/{id}', 'UsuarioController@update2');
 
-    Route::delete('/users/del/{id}', 'UsuarioController@delete')->name('rota.del');
+    Route::delete('/users/delete/{id}', 'UsuarioController@delete')->name('rota.del');
+
+    Route::delete('/users/del/{id}', 'UsuarioController@deleteuser')->name('rota.del');
 
     // Posts
 

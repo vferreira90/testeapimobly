@@ -24,9 +24,6 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('usuarios.create') }}">Criar Usuarios</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Listar Posts</a>
-        </li>
       </ul>
     </div>
   </nav>
@@ -51,10 +48,26 @@
             </th>
             <td>{{$usuario['name']}}</td>
             <td>
-              <a href="{{ route('usuarios.show', ['usuario' => $usuario['id']]) }}">Detalhes</a>
-              <a href="{{ route('usuarios.edit', ['usuario' => $usuario['id']]) }}">Editar</a>
-              <a href="#">Apagar</a>
-              <a href="{{ route('rota.postsuser', ['id' => $usuario['id']]) }}">Posts</a>
+  
+              <form action="{{ route('usuarios.show', ['usuario' => $usuario['id']]) }}">
+                @csrf
+                <button type="submit" class="btn btn-primary btn-sm btn-block">Detalhes</button>
+              </form>
+
+              <form action="{{ route('usuarios.edit', ['usuario' => $usuario['id']]) }}">
+                @csrf
+                <button type="submit" class="btn btn-primary btn-sm btn-block" >Editar</button>
+              </form>
+
+              <form action="{{ route('rota.del', ['id' => $usuario['id']]) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-primary btn-sm btn-block" >Delete</button>
+              </form>
+              <form action="{{ route('rota.postsuser', ['id' => $usuario['id']]) }}">
+                @csrf
+                <button type="submit"  class="btn btn-primary btn-sm btn-block">Posts</button>
+              </form>
             </td>
           </tr>
 
