@@ -32,114 +32,113 @@
     </nav>
 
 
-    <form action="{{ route('usuarios.update', ['usuario' => $usuarios['id']])}}" class="form-horizontal" method="POST">
+    <form action="{{ route('usuarios.store')}}" class="form-horizontal" method="POST">
         @csrf
-        @method('PUT')
         <div class="container">
 
-        <h3>Editar do Usuario</h3> 
+        <h3>Criar do Usuario</h3> 
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">ID</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['id'])}}" name="id">
+                    <input class="form-control" type="text" placeholder="digite" name="id">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['name'])}}" name="name">
+                    <input class="form-control" type="text" placeholder="digite" name="name">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Username</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['username'])}}" name="username">
+                    <input class="form-control" type="text" placeholder="digite" name="username">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['email'])}}" name="email">
+                    <input class="form-control" type="text" placeholder="digite" name="email">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Street</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['street'])}}" name="street">
+                    <input class="form-control" type="text" placeholder="digite" name="street">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Suite</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['suite'])}}" name="suite">
+                    <input class="form-control" type="text" placeholder="digite" name="suite">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">City</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['city'])}}" name="city">
+                    <input class="form-control" type="text" placeholder="digite" name="city">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Zipcode</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['zipcode'])}}" name="zipcode">
+                    <input class="form-control" type="text" placeholder="digite" name="zipcode">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Longitude</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['geolng'])}}" name="geolng">
+                    <input class="form-control" type="text" placeholder="digite" name="geolng">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Latitude</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['geolat'])}}" name="geolat">
+                    <input class="form-control" type="text" placeholder="digite" name="geolat">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">phone</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['phone'])}}" name="phone">
+                    <input class="form-control" type="text" placeholder="digite" name="phone">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">website</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['website'])}}" name="website">
+                    <input class="form-control" type="text" placeholder="digite" name="website">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">compname</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['compname'])}}" name="compname">
+                    <input class="form-control" type="text" placeholder="digite" name="compname">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">catchphrase</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['catchphrase'])}}" name="catchphrase">
+                    <input class="form-control" type="text" placeholder="digite" name="catchphrase">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">bs</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" value="{{old('usuario', $usuarios['bs'])}}" name="bs">
+                    <input class="form-control" type="text" placeholder="digite" name="bs">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary mb-2">Salvar</button>
+                    <button type="submit" class="btn btn-primary mb-2">Cadastrar</button>
                 </div>
             </div>
         </div>
