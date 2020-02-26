@@ -54,7 +54,7 @@
               <a href="{{ route('usuarios.show', ['usuario' => $usuario['id']]) }}">Detalhes</a>
               <a href="{{ route('usuarios.edit', ['usuario' => $usuario['id']]) }}">Editar</a>
               <a href="#">Apagar</a>
-              <a href="{{ route('rota.posts', ['id' => $usuario['id']]) }}">Posts</a>
+              <a href="{{ route('rota.postsuser', ['id' => $usuario['id']]) }}">Posts</a>
             </td>
           </tr>
 

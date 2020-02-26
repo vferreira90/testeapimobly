@@ -37,7 +37,7 @@ Route::namespace('Api')->group(function () {
 
     // Posts
 
-    //Route::get('/users/posts', 'PostController@posts');
+    Route::get('/users/posts/{id}', 'PostController@posts')->name('rota.postsuser');;
     
     Route::get('/users/{id}/posts', 'PostController@selectpost')->name('rota.posts');
 

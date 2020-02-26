@@ -10,12 +10,27 @@ use App\Post;
 class PostController extends Controller
 {
 
-    //public function posts()
-    //{ 
-    //    echo " OK ";
-    //    $posts = Post::all();
-    //    return $posts;
-    //}
+    public function posts($id)
+    { 
+        try {
+
+            $arraypost = Post::all();
+            $arr = [];
+
+            foreach ($arraypost as $post) {
+
+                if ($post['userId'] == $id) {
+                    array_push($arr, $post);
+                }
+            }
+
+        } catch (\Exception $erro) {
+            return ['retorno' => 'erro', 'details' => $erro];
+        }
+
+        return view('usuarios.postsshow')->with(['usuarios' => $arr]);
+
+    }
 
     public function addpost(Request $request)
     {
