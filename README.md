@@ -62,5 +62,5 @@ Clicar no botao editar, editar os dados e salvar.
 15- visualizar posts relacionados ao usuário:
 Clicar no botao posts.
 
-16- apagar usuário
+16- apagar usuário:
 Clicar no botao delete. 
