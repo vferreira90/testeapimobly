@@ -50,17 +50,17 @@ php artisan serve
 
 No navegador acessar a url: http://localhost:8000/usuarios
 
-12- visualizar detalhes do usuário
-Clicar no texto Criar detalhes.
-
-13 - editar dados do usuário
-Clicar no texto editar, editar os dados e salvar.
-
-14- incluir usuário
+12- incluir usuário
 Clicar no texto Criar usuários, incluir os dados e salvar.
 
+13- visualizar detalhes do usuário
+Clicar no botao detalhes.
+
+14 - editar dados do usuário
+Clicar no botao editar, editar os dados e salvar.
+
 15- visualizar posts relacionados ao usuário:
-Clicar no texto posts.
+Clicar no botao posts.
 
 16- apagar usuário
-Não consegui terminar, pois não consegui manipular corretamente utilizando as rotas resource. 
+Clicar no botao delete. 
